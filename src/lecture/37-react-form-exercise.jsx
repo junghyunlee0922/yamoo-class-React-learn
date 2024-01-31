@@ -55,7 +55,7 @@ function Exercise() {
         </div>
       </form>
 
-      <div style={{ marginBlockStart: 12, display: 'felx', gap: 4 }}>
+      <div style={{ marginBlockStart: 12, display: 'flex', gap: 4 }}>
         <button
           type="button"
           onClick={() => {
