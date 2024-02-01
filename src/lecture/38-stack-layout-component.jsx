@@ -26,9 +26,9 @@ const PIZZA = {
 };
 
 const INITIAL_ORDER = {
-  type: PIZZA.types[PIZZA.types.length - 1],
-  toppings: [],
+  type: PIZZA.types[0],
   isAllToppings: false,
+  toppings: [],
 };
 
 // Design is All. All is Design.
@@ -55,8 +55,21 @@ function Form() {
     });
   };
 
+  const handleChangePizzaToppings = (e) => {
+    console.log(e.target.value);
+  };
+
+  const handleOrder = (e) => {
+    e.preventDefault();
+    console.log(orderState);
+  };
+
+  const handleCancel = () => {
+    setOrderState(INITIAL_ORDER);
+  };
+
   return (
-    <form>
+    <form onSubmit={handleOrder} onReset={handleCancel}>
       <h3>피자 타입을 선택하세요.</h3>
       {PIZZA.types.map((pizzaType) => (
         <FormChecker
@@ -79,7 +92,13 @@ function Form() {
         전체 선택
       </FormChecker>
       {PIZZA.toppings.map((topping) => (
-        <FormChecker key={topping} checkbox name="topping" value={topping}>
+        <FormChecker
+          checkbox
+          key={topping}
+          name="topping"
+          value={topping}
+          onChange={handleChangePizzaToppings}
+        >
           {topping}
         </FormChecker>
       ))}
