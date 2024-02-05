@@ -13,15 +13,17 @@ function Exercise() {
 function StopWatch() {
   // 로직 분리
   // 커스텀 훅 사용 API
-  const [time, start, pause, stop] = useTime();
+  // 배열 구조 분해 할당 API
+  // const [time, start, pause, stop, display] = useTime();
 
-  const displayTimer = time === 0 ? 0 : time.toFixed(3);
+  // 객체 구조 분해 할당 API
+  const { time, getDisplayTime: display, play, pause, stop } = useTime();
 
   return (
     <div>
-      <h2>Stop Watch: {displayTimer}초</h2>
+      <h2>Stop Watch: {display(time)}초</h2>
       <div className="flex gap-2 my-4">
-        <button type="button" onClick={start}>
+        <button type="button" onClick={play}>
           시작
         </button>
         <button type="button" onClick={pause}>
@@ -36,16 +38,21 @@ function StopWatch() {
 }
 
 function Timer() {
-  const [time, begin, , end] = useTime();
-  const displayTime = time === 0 ? 0 : time.toFixed(3);
+  // 배열 구조 분해 할당 API
+  // const [time, begin, , , output] = useTime();
+
+  // 객체 구조 분해 할당 API
+  const { stop, time, getDisplayTime, play } = useTime();
+
+  const printTime = getDisplayTime(time, 2);
 
   return (
     <div>
-      <button type="button" onClick={begin}>
+      <button type="button" onClick={play}>
         BEGIN
       </button>
-      <h2>타이머: {displayTime}s</h2>
-      <button type="button" onClick={end}>
+      <h2>타이머: {printTime}s</h2>
+      <button type="button" onClick={stop}>
         END
       </button>
     </div>
