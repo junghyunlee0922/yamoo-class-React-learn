@@ -1,16 +1,16 @@
 import { useStorage } from '@/hooks';
 
-const KEY = 'to-dayoung'
+const KEY = 'to-dayoung';
 
 function Exercise() {
-  const [message, setMessage] = useStorage(KEY, '다영님 졸지마세요');
+  const [message, setMessage] = useStorage(KEY, '다영님 졸지 마세요!!!');
 
   const handleUpdate = (e) => {
-    setMessage(e.target.value)
-  }
+    setMessage(e.target.value);
+  };
 
   return (
-    <div className='m-5'>
+    <div className="m-5">
       <input
         type="text"
         aria-label="오늘 기억하고 싶은 말"
@@ -19,7 +19,7 @@ function Exercise() {
         onChange={handleUpdate}
       />
 
-      <p className='my-2'>{message}</p>
+      <p className="my-2">{message}</p>
     </div>
   );
 }
