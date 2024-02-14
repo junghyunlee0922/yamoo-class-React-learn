@@ -40,7 +40,11 @@
   "dependencies": {
     "react": "18.2.0",
     "react-dom": "18.2.0",
+<<<<<<< HEAD
     "react-helmet-async": "^2.0.4",
+=======
+    "react-helmet-async": "2.0.4",
+>>>>>>> ad24f672debd115d19682efdfec06b0463908161
     "react-router-dom": "6.22.0",
     "react-tilt": "1.0.2",
     "vanilla-tilt": "1.8.1"
