@@ -24,7 +24,7 @@
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
     "@vitejs/plugin-react": "4.2.1",
-    "autoprefixer": "^10.4.17",
+    "autoprefixer": "10.4.17",
     "eslint": "8.56.0",
     "eslint-plugin-react": "7.33.2",
     "eslint-plugin-react-hooks": "4.6.0",
@@ -33,18 +33,14 @@
     "postcss-import": "16.0.0",
     "prop-types": "15.8.1",
     "storybook": "7.6.10",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "3.4.1",
     "typescript": "5.3.3",
     "vite": "5.0.11"
   },
   "dependencies": {
     "react": "18.2.0",
     "react-dom": "18.2.0",
-<<<<<<< HEAD
-    "react-helmet-async": "^2.0.4",
-=======
     "react-helmet-async": "2.0.4",
->>>>>>> ad24f672debd115d19682efdfec06b0463908161
     "react-router-dom": "6.22.0",
     "react-tilt": "1.0.2",
     "vanilla-tilt": "1.8.1"

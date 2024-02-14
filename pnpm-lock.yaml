@@ -12,11 +12,7 @@ dependencies:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
   react-helmet-async:
-<<<<<<< HEAD
-    specifier: ^2.0.4
-=======
     specifier: 2.0.4
->>>>>>> ad24f672debd115d19682efdfec06b0463908161
     version: 2.0.4(react-dom@18.2.0)(react@18.2.0)
   react-router-dom:
     specifier: 6.22.0
@@ -72,7 +68,7 @@ devDependencies:
     specifier: 4.2.1
     version: 4.2.1(vite@5.0.11)
   autoprefixer:
-    specifier: ^10.4.17
+    specifier: 10.4.17
     version: 10.4.17(postcss@8.4.33)
   eslint:
     specifier: 8.56.0
@@ -99,7 +95,7 @@ devDependencies:
     specifier: 7.6.10
     version: 7.6.10
   tailwindcss:
-    specifier: ^3.4.1
+    specifier: 3.4.1
     version: 3.4.1
   typescript:
     specifier: 5.3.3
